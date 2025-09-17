@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>สมาชิก</title>
+  <style>
+    :root{
+      --blue:#3b82f6;   /* เส้นกรอบหัวข้อ */
+      --text:#111827;   /* สีตัวอักษร */
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans Thai", "Noto Sans", sans-serif;
+      color:var(--text);
+      background:#fff;
+    }
+    .page{
+      max-width:1200px;
+      margin:40px auto 80px;
+      padding:0 24px;
+    }
+
+    /* หัวข้อบน */
+    .title{
+      border:2px solid var(--blue);
+      border-radius:6px;
+      text-align:center;
+      font-size:28px;
+      font-weight:600;
+      padding:14px 16px;
+      color:#1f2937;
+      letter-spacing:.5px;
+      width:min(100%,980px);
+      margin:0 auto 36px;
+    }
+
+    /* กริดสมาชิก */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap:40px 56px; /* row / column */
+    }
+    /* responsive */
+    @media (max-width:1100px){
+      .grid{ grid-template-columns: repeat(4, 1fr); gap:36px 44px; }
+    }
+    @media (max-width:900px){
+      .grid{ grid-template-columns: repeat(3, 1fr); gap:32px 36px; }
+    }
+    @media (max-width:640px){
+      .grid{ grid-template-columns: repeat(2, 1fr); gap:28px 24px; }
+      .title{ font-size:24px; }
+    }
+
+    .member{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      padding:16px 8px 8px;
+      border-radius:12px;
+    }
+    .member.selected{
+      border:3px dashed var(--orange);
+      padding:13px 5px 5px; /* ชดเชยความหนาเส้นปะ */
+    }
+    .avatar{
+      width:120px; height:120px;
+      display:block;
+    }
+    .name{
+      margin-top:10px;
+      font-size:22px;
+      font-weight:700;
+    }
+    /* ปรับขนาดตัวอักษรตามจอ */
+    @media (max-width:900px){
+      .avatar{ width:100px; height:100px; }
+      .name{ font-size:20px; }
+    }
+    @media (max-width:640px){
+      .avatar{ width:92px; height:92px; }
+      .name{ font-size:18px; }
+    }
+
+    /* ไอคอนหน้ายิ้มมีรัศมี (SVG) ให้เส้นคมชัด */
+    .halo-face{ stroke:#111; fill:none; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1 class="title">สมาชิก</h1>
+
+    <section class="grid">
+      <!-- แถว 1 -->
+      <figure class="member">
+        <!-- ไอคอน -->
+        <svg class="avatar" viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">โอม</figcaption>
+      </figure>
+
+      <figure class="member">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">นางสาวนิธิวดี บัวผัน</figcaption>
+        <figcaption class="name">66160230@gmail.com</figcaption>
+      </figure>
+
+      <figure class="member">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">Jame Smith</figcaption>
+      </figure>
+
+      <figure class="member">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">Jame Smith</figcaption>
+      </figure>
+
+      <figure class="member">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">Jame Smith</figcaption>
+      </figure>
+
+      <!-- แถว 2 -->
+      <figure class="member selected">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">Jame Smith</figcaption>
+      </figure>
+
+      <figure class="member">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">Jame Smith</figcaption>
+      </figure>
+
+      <figure class="member">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">Jame Smith</figcaption>
+      </figure>
+
+      <figure class="member">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">Jame Smith</figcaption>
+      </figure>
+
+      <figure class="member">
+        <svg class="avatar" viewBox="0 0 120 120">
+          <circle class="halo-face" cx="60" cy="64" r="36"></circle>
+          <path class="halo-face" d="M32 28c8-6 48-6 56 0M42 66c6 8 30 8 36 0M48 56c2 2 4 3 6 3M78 56c-2 2-4 3-6 3"></path>
+        </svg>
+        <figcaption class="name">Jame Smith</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
